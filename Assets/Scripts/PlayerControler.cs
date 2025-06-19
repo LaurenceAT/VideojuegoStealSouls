@@ -13,6 +13,13 @@ public class PlayerControler : MonoBehaviour
     [SerializeField] private float speed;
     private int direction = 1;
     private int idSpeed;
+    private int idIsGrounded;
+    [SerializeField] private float jumpForce;
+
+    [SerializeField] private Transform lFoot, rFoot;
+    [SerializeField] private bool isGrounded;
+    [SerializeField] private float rayLengnth;
+    [SerializeField] private LayerMask groundLayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +29,9 @@ public class PlayerControler : MonoBehaviour
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_animator = GetComponent<Animator>();
         idSpeed = Animator.StringToHash("Speed");
+        idIsGrounded = Animator.StringToHash("isGrounded");
+        lFoot = GameObject.Find("LFoot").GetComponent<Transform>();
+        rFoot = GameObject.Find("RFoot").GetComponent<Transform>();
     }
 
     private void Update()
@@ -32,6 +42,7 @@ public class PlayerControler : MonoBehaviour
     private void SetAnimatorValues()
     {
         m_animator.SetFloat(idSpeed, Mathf.Abs(m_rigidbody2D.linearVelocityX));
+        m_animator.SetBool(idIsGrounded, isGrounded);
     }
 
 
@@ -40,7 +51,10 @@ public class PlayerControler : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        Jump();
+        CheckGround();
     }
+
 
     private void Move()
     {
@@ -55,6 +69,28 @@ public class PlayerControler : MonoBehaviour
         {
             m_transform.localScale = new Vector3(-m_transform.localScale.x, 1, 1);
             direction *= -1;
+        }
+    }
+    private void Jump()
+    {
+        if (m_gatherInput.IsJumping)
+        {
+            if(isGrounded)
+                m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.ValueX, jumpForce);
+        }
+        m_gatherInput.IsJumping = false; 
+    }
+    private void CheckGround()
+    {
+        RaycastHit2D lFootRay = Physics2D.Raycast(lFoot.position,Vector2.down,rayLengnth,groundLayer);
+        RaycastHit2D rFootRay = Physics2D.Raycast(lFoot.position,Vector2.down,rayLengnth,groundLayer);
+        if (lFootRay || rFootRay)
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
         }
     }
 }
