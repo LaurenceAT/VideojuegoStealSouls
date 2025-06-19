@@ -901,6 +901,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 10
+  extrajumps: 1
+  counterExtraJumps: 1
   lFoot: {fileID: 0}
   rFoot: {fileID: 0}
   isGrounded: 0

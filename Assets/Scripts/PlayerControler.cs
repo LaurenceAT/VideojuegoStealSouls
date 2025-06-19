@@ -15,6 +15,10 @@ public class PlayerControler : MonoBehaviour
     private int idSpeed;
     private int idIsGrounded;
     [SerializeField] private float jumpForce;
+        //EXTRAJUMP
+    [SerializeField] private int extrajumps;
+    [SerializeField] private int counterExtraJumps;
+
 
     [SerializeField] private Transform lFoot, rFoot;
     [SerializeField] private bool isGrounded;
@@ -46,7 +50,7 @@ public class PlayerControler : MonoBehaviour
     }
 
 
-
+     
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -77,6 +81,11 @@ public class PlayerControler : MonoBehaviour
         {
             if(isGrounded)
                 m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.ValueX, jumpForce);
+            if(counterExtraJumps > 0)
+            {
+                m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.ValueX, jumpForce);
+                counterExtraJumps--;
+            }
         }
         m_gatherInput.IsJumping = false; 
     }
@@ -87,6 +96,7 @@ public class PlayerControler : MonoBehaviour
         if (lFootRay || rFootRay)
         {
             isGrounded = true;
+            counterExtraJumps = extrajumps;
         }
         else
         {
