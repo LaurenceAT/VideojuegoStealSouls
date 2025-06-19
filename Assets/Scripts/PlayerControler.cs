@@ -79,15 +79,29 @@ public class PlayerControler : MonoBehaviour
     {
         if (m_gatherInput.IsJumping)
         {
-            if(isGrounded)
-                m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.ValueX, jumpForce);
-            if(counterExtraJumps > 0)
+            float originalSpeed = speed; // Guardar la velocidad original
+
+            if (isGrounded)
             {
+                speed = 6f; // Aumentar la velocidad al saltar
+                m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.ValueX, jumpForce);
+            }
+
+            if (counterExtraJumps > 0)
+            {
+                speed = 6f; // Aumentar la velocidad en saltos extra
                 m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.ValueX, jumpForce);
                 counterExtraJumps--;
             }
+
+            Invoke("ResetSpeed", 0.1f);
         }
         m_gatherInput.IsJumping = false; 
+    }
+
+    private void ResetSpeed()
+    {
+        speed = 5f; // Volver a la velocidad normal
     }
     private void CheckGround()
     {
