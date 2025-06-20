@@ -39,7 +39,7 @@ public class GatherInput : MonoBehaviour
     private void StarJump(InputAction.CallbackContext context)
     {
         _isJumping = true;
-    }
+    } 
 
     private void StopJump(InputAction.CallbackContext context)
     {

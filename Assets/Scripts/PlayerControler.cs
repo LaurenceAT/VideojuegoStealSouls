@@ -3,27 +3,29 @@ using UnityEngine;
 
 public class PlayerControler : MonoBehaviour
 {
-    //COMPONENTS
+    //PLAYER COMPONENTS
     private Rigidbody2D m_rigidbody2D;
     private GatherInput m_gatherInput;
     private Transform m_transform;
     private Animator m_animator;
 
-    //VALUES
+    [Header("Move and Jump settings")]
     [SerializeField] private float speed;
     private int direction = 1;
-    private int idSpeed;
-    private int idIsGrounded;
     [SerializeField] private float jumpForce;
         //EXTRAJUMP
-    [SerializeField] private int extrajumps;
+    [SerializeField] private int extraJumps;
     [SerializeField] private int counterExtraJumps;
+    private int idSpeed;
 
-
-    [SerializeField] private Transform lFoot, rFoot;
+    [Header("Ground settings")]
+    [SerializeField] private Transform lFoot;
+    [SerializeField] private Transform rFoot;
     [SerializeField] private bool isGrounded;
     [SerializeField] private float rayLengnth;
     [SerializeField] private LayerMask groundLayer;
+    private int idIsGrounded;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -110,7 +112,7 @@ public class PlayerControler : MonoBehaviour
         if (lFootRay || rFootRay)
         {
             isGrounded = true;
-            counterExtraJumps = extrajumps;
+            counterExtraJumps = extraJumps;
         }
         else
         {
