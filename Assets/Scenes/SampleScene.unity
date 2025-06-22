@@ -157,14 +157,14 @@ MonoBehaviour:
     ScreenPosition: {x: -0, y: 0}
     DeadZone:
       Enabled: 1
-      Size: {x: 0, y: 0.2}
+      Size: {x: 0, y: 0.04}
     HardLimits:
       Enabled: 0
       Size: {x: 0.8, y: 0.8}
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
-  TargetOffset: {x: 3.34, y: 1.93, z: 0}
-  Damping: {x: 0.7, y: 0.8, z: 1}
+  TargetOffset: {x: 3.34, y: 0.3, z: 0}
+  Damping: {x: 0.05, y: 1.5, z: 1}
   Lookahead:
     Enabled: 0
     Time: 0
@@ -222,7 +222,7 @@ Transform:
   m_GameObject: {fileID: 81011008}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.63, y: -0.89999986, z: -10}
+  m_LocalPosition: {x: 23.23, y: -2.5900004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -393,7 +393,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.63, y: -0.89999986, z: -10}
+  m_LocalPosition: {x: 23.23, y: -2.5900004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1766,7 +1766,7 @@ Transform:
   m_GameObject: {fileID: 1076473700}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.29, y: -2.83, z: 0}
+  m_LocalPosition: {x: 19.89, y: -2.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1850,10 +1850,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91459b276124c3c4bae477243e579b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_transform: {fileID: 1076473702}
   speed: 5
   jumpForce: 10
   extraJumps: 1
   counterExtraJumps: 1
+  canDoubleJump: 0
   lFoot: {fileID: 0}
   rFoot: {fileID: 0}
   isGrounded: 0
@@ -1861,6 +1863,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
+  checkWallDistance: 0.27
+  iswallDetected: 0
 --- !u!114 &1076473706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34512,7 +34516,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
