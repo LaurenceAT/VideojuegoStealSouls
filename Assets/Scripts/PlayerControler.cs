@@ -12,6 +12,7 @@ public class PlayerControler : MonoBehaviour
     //ANIMATOR IDS
     private int idIsGrounded;
     private int idSpeed;
+    private int idIsWallDetected;
 
     [Header("Move settings")]
     [SerializeField] private float speed; 
@@ -36,8 +37,9 @@ public class PlayerControler : MonoBehaviour
 
     [Header("Wall settings")]
     [SerializeField] private float checkWallDistance;
-    [SerializeField] private bool iswallDetected;
-
+    [SerializeField] private bool isWallDetected;
+    [SerializeField] private bool canWallSlide;
+    [SerializeField] private float slideSpeed;
 
     private void Awake()
     {
@@ -53,6 +55,7 @@ public class PlayerControler : MonoBehaviour
     {
         idSpeed = Animator.StringToHash("speed");
         idIsGrounded = Animator.StringToHash("isGrounded");
+        idIsWallDetected = Animator.StringToHash("isWallDetected");
         lFoot = GameObject.Find("LFoot").GetComponent<Transform>();
         rFoot = GameObject.Find("RFoot").GetComponent<Transform>();
         counterExtraJumps = extraJumps;
@@ -67,6 +70,7 @@ public class PlayerControler : MonoBehaviour
     {
         m_animator.SetFloat(idSpeed, Mathf.Abs(m_rigidbody2D.linearVelocityX));
         m_animator.SetBool(idIsGrounded, isGrounded);
+        m_animator.SetBool(idIsWallDetected, isWallDetected);
     }
 
 
@@ -82,11 +86,21 @@ public class PlayerControler : MonoBehaviour
     {
         HandleGround();
         HandleWall();
+        HandleWallSlide();
+    }
+
+    private void HandleWallSlide()
+    {
+        canWallSlide = isWallDetected;
+        if (!canWallSlide) return;
+        canDoubleJump = false;
+        slideSpeed = m_gatherInput.Value.y < 0 ? 1 : 0.5f;
+        m_rigidbody2D.linearVelocity = new Vector2(m_rigidbody2D.linearVelocityX,m_rigidbody2D.linearVelocityY * slideSpeed); 
     }
 
     private void HandleWall()
     {
-        iswallDetected = Physics2D.Raycast(m_transform.position, Vector2.right * direction, checkWallDistance, groundLayer);
+        isWallDetected = Physics2D.Raycast(m_transform.position, Vector2.right * direction, checkWallDistance, groundLayer);
     }
 
     private void HandleGround()
@@ -108,13 +122,13 @@ public class PlayerControler : MonoBehaviour
     private void Move()
     {
         Flip();
-        m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.ValueX, m_rigidbody2D.linearVelocityY);
+        m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.Value.x, m_rigidbody2D.linearVelocityY);
 
     }
 
     private void Flip()
     {
-        if(m_gatherInput.ValueX * direction < 0)
+        if(m_gatherInput.Value.x * direction < 0)
         {
             m_transform.localScale = new Vector3(-m_transform.localScale.x, 1, 1);
             direction *= -1;
@@ -124,22 +138,18 @@ public class PlayerControler : MonoBehaviour
     {
         if (m_gatherInput.IsJumping)
         {
-            float originalSpeed = speed; // Guardar la velocidad original
 
             if (isGrounded)
             {
-                speed = 6f; // Aumentar la velocidad al saltar
-                m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.ValueX, jumpForce);
+                m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.Value.x, jumpForce);
                 canDoubleJump = true;
             }
             else if (counterExtraJumps > 0 && canDoubleJump)
             {   
-                speed = 6f; // Aumentar la velocidad en saltos extra
-                m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.ValueX, jumpForce);
+                m_rigidbody2D.linearVelocity = new Vector2(speed * m_gatherInput.Value.x, jumpForce);
                 counterExtraJumps--;
             }
 
-            Invoke("ResetSpeed", 0.1f);
         }
         m_gatherInput.IsJumping = false; 
     }
@@ -149,8 +159,5 @@ public class PlayerControler : MonoBehaviour
         Gizmos.DrawLine(m_transform.position, new Vector2(m_transform.position.x + (checkWallDistance * direction),m_transform.position.y));
     }
 
-    private void ResetSpeed()
-    {
-        speed = 5f; // Volver a la velocidad normal
-    }
+
 }

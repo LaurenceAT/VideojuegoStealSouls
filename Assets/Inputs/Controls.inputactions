@@ -564,9 +564,9 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "1D Axis",
-                    "id": "afd87617-f192-4be7-b9f6-ee81f92bd1cc",
-                    "path": "1DAxis",
+                    "name": "2D Vector",
+                    "id": "33552c9d-29d7-432b-9911-034b47f82601",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -575,8 +575,30 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "437bb57c-fa73-4c72-9a4b-22830c230c5d",
+                    "name": "up",
+                    "id": "63c1624a-1b77-43af-a5af-00d7213d980e",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "15e95bf0-1364-4d14-8076-64c78edec5de",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "efc93b72-9580-4ce9-b152-431ac606c9d2",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -586,8 +608,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
-                    "id": "5205cb2f-0931-43bd-b2e1-091095632ac3",
+                    "name": "right",
+                    "id": "9cda940b-eeb5-496c-88a3-b7009a0f7f3d",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -597,9 +619,9 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "1D Axis",
-                    "id": "8762c88e-a1d8-41e0-a5a6-690243aa946f",
-                    "path": "1DAxis",
+                    "name": "2D Vector",
+                    "id": "6d8cead0-bbab-4532-81b4-9cd07f6fe3ab",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -608,8 +630,30 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "7bd9f9a1-9942-40e5-856a-1bc5e9cf0097",
+                    "name": "up",
+                    "id": "9e8ebe9a-96a7-4950-91b4-49976b3b1906",
+                    "path": "<DualShockGamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "d52517cb-ca36-41c9-abe6-64141542f81b",
+                    "path": "<DualShockGamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "d66e41dd-fabf-4b2e-9c33-80301ddf49a8",
                     "path": "<DualShockGamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
@@ -619,8 +663,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
-                    "id": "73f0abc4-a312-48ec-a629-bd133739e180",
+                    "name": "right",
+                    "id": "d43e67f5-ed0d-4e86-8144-a532fd7085e5",
                     "path": "<DualShockGamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
@@ -630,19 +674,41 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "1D Axis",
-                    "id": "3ae89a4b-ccee-4981-8583-8113d2e19f05",
-                    "path": "1DAxis",
+                    "name": "2D Vector",
+                    "id": "d872913f-10f5-40a8-be45-2eada3f2d93a",
+                    "path": "2DVector",
                     "interactions": "",
-                    "processors": "AxisDeadzone",
+                    "processors": "",
                     "groups": "",
                     "action": "Move",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "e14678b2-37ea-4b22-8167-69d31e15924e",
+                    "name": "up",
+                    "id": "f49ed7e5-7e36-4973-9ee6-a44f936a04c5",
+                    "path": "<DualShockGamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "1de9facc-fd65-4875-8157-c72fbc7d0d5d",
+                    "path": "<DualShockGamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "99e080b1-738d-4689-b47f-b17131c7c017",
                     "path": "<DualShockGamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
@@ -652,8 +718,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
-                    "id": "f753bef9-2ab4-4018-899a-5601c5ff398b",
+                    "name": "right",
+                    "id": "a0d4210a-d837-4f51-94c7-10fe9ec4b3d6",
                     "path": "<DualShockGamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
