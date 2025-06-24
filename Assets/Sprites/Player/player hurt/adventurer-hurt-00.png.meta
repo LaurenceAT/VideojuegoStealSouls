@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 98cf63aa5b4ffdb46a5060907aafb867
+guid: 9e8651c52e53726469c3046978674f23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3089189884505942830
-    second: adventurer-hurt-01_0
+      213: 438606371704431329
+    second: adventurer-hurt-00_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: adventurer-hurt-01_0
+      name: adventurer-hurt-00_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 0
-        width: 21
-        height: 26
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d41b42da2ef025d0800000000000000
-      internalID: -3089189884505942830
+      spriteID: 1e26aa5db2e361600800000000000000
+      internalID: 438606371704431329
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 70a05b8dcd44b1d468c9df97340202a0
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      adventurer-hurt-00_0: 438606371704431329
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
