@@ -48,7 +48,7 @@ public class PlayerControler : MonoBehaviour
 
     [Header("Knock settings")]
     [SerializeField] private bool isKnocked;
-    [SerializeField] private bool canBeKnocked;
+    //[SerializeField] private bool canBeKnocked;
     [SerializeField] private Vector2 knockedPower;
     [SerializeField] private float knockedDuration;
 
@@ -72,7 +72,6 @@ public class PlayerControler : MonoBehaviour
         lFoot = GameObject.Find("LFoot").GetComponent<Transform>();
         rFoot = GameObject.Find("RFoot").GetComponent<Transform>();
         counterExtraJumps = extraJumps;
-        GameManager.instance.AddScore();
     }
 
     private void Update()
@@ -204,10 +203,10 @@ public class PlayerControler : MonoBehaviour
     private IEnumerator KnockbackRoutine()
     {
         isKnocked = true;
-        canBeKnocked = false;
+        //canBeKnocked = false;
         yield return new WaitForSeconds(knockedDuration);
         isKnocked= false;
-        canBeKnocked= true;
+        //canBeKnocked= true;
     }
 
     private void OnDrawGizmos()

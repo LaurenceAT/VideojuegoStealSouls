@@ -3,9 +3,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    [SerializeField]private PlayerControler _playerControler;
+    [SerializeField] private PlayerControler _playerControler;
 
     public PlayerControler PlayerControler { get => _playerControler;}
+
+    [SerializeField] private int _coincollected;
+    public int Coincollected { get => _coincollected;}
 
     private void Awake()
     {
@@ -13,8 +16,5 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public void AddScore()
-    {
-        Debug.Log("Added Score");
-    }
+    public void AddCoin() => _coincollected++;
 }

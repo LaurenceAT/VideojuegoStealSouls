@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 963af8d99640d094a9a064cea4d70a13
+guid: 8e3312f40d9daca40a0a91521174d850
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3636765450789175911
-    second: spr_coin_gri_0
+      213: -7909743977867431446
+    second: MonedaP_0
   - first:
-      213: -7287818360224525318
-    second: spr_coin_gri_1
+      213: 2494353536357545931
+    second: MonedaP_1
   - first:
-      213: -6942878118906197093
-    second: spr_coin_gri_2
+      213: -1451745731202529892
+    second: MonedaP_2
   - first:
-      213: -4875957336769796633
-    second: spr_coin_gri_3
+      213: -3831586325613545685
+    second: MonedaP_3
+  - first:
+      213: -7142416684250839623
+    second: MonedaP_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_coin_gri_0
+      name: MonedaP_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
         height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.49}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 762c3b9b8e2687230800000000000000
-      internalID: 3636765450789175911
+      spriteID: ae13dee72c1fa3290800000000000000
+      internalID: -7909743977867431446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_coin_gri_1
+      name: MonedaP_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
         height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.49}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af35f3b50d77cda90800000000000000
-      internalID: -7287818360224525318
+      spriteID: bc7b4de5359bd9220800000000000000
+      internalID: 2494353536357545931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_coin_gri_2
+      name: MonedaP_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
         height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.49}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9b83c3c221f5af90800000000000000
-      internalID: -6942878118906197093
+      spriteID: c95cb7bf2fc5adbe0800000000000000
+      internalID: -1451745731202529892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_coin_gri_3
+      name: MonedaP_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
         height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.49}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e560e9d2ae155cb0800000000000000
-      internalID: -4875957336769796633
+      spriteID: b277f87998873dac0800000000000000
+      internalID: -3831586325613545685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonedaP_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5c7692ed901ec90800000000000000
+      internalID: -7142416684250839623
       vertices: []
       indices: 
       edges: []
@@ -213,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7b2c681edcfe9ea40b46010260aaec78
+    spriteID: 03e97f8e9a686784d8928a031f2dafac
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spr_coin_gri_0: 3636765450789175911
-      spr_coin_gri_1: -7287818360224525318
-      spr_coin_gri_2: -6942878118906197093
-      spr_coin_gri_3: -4875957336769796633
+      MonedaP_0: -7909743977867431446
+      MonedaP_1: 2494353536357545931
+      MonedaP_2: -1451745731202529892
+      MonedaP_3: -3831586325613545685
+      MonedaP_4: -7142416684250839623
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
