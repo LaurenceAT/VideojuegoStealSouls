@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
     [SerializeField] private Rigidbody2D m_rigitbody2D;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
+    [SerializeField] private CoinType coinType;
     private int idCoinIndex;
 
     private void Awake()
@@ -21,13 +22,6 @@ public class Coin : MonoBehaviour
         gameManager = GameManager.instance;
         SetRandomCOin();
     }
-
-    private void SetRandomCOin()
-    {
-        var randomCoinIndex = Random.Range(0, 4);
-        animator.SetFloat(idCoinIndex, randomCoinIndex);
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
@@ -36,4 +30,19 @@ public class Coin : MonoBehaviour
             gameManager.AddCoin();
     }
 
+    private void SetRandomCOin()
+    {
+        if (!GameManager.instance.CoinHaveRandomLook())
+        {
+            UpdateCoinType();
+            return;
+        }
+        var randomCoinIndex = Random.Range(0, 8);
+        animator.SetFloat(idCoinIndex, randomCoinIndex);
+    }
+
+    private void UpdateCoinType()
+    {
+        animator.SetFloat(idCoinIndex, (int)coinType);
+    }
 }

@@ -31,8 +31,8 @@ public class PlayerControler : MonoBehaviour
     [Header("Ground settings")]
     [SerializeField] private Transform lFoot;
     [SerializeField] private Transform rFoot;
-    RaycastHit2D lFootRay;
-    RaycastHit2D rFootRay;
+    private RaycastHit2D lFootRay;
+    private RaycastHit2D rFootRay;
     [SerializeField] private bool isGrounded;
     [SerializeField] private float rayLegnth;
     [SerializeField] private LayerMask groundLayer; 
@@ -180,7 +180,7 @@ public class PlayerControler : MonoBehaviour
         StartCoroutine(WallJumpRoutine());
     }
 
-    IEnumerator WallJumpRoutine()
+    private IEnumerator WallJumpRoutine()
     {
         isWallJumping = true;
         yield return new WaitForSeconds(wallJumpDuration);

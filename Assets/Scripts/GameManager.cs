@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     [SerializeField] private PlayerControler _playerControler;
+    [Header("Coin Manager")]
+    [SerializeField] private bool coinHaveRandomLook;
 
     public PlayerControler PlayerControler { get => _playerControler;}
 
@@ -17,4 +19,5 @@ public class GameManager : MonoBehaviour
     }
 
     public void AddCoin() => _coincollected++;
+    public bool CoinHaveRandomLook() => coinHaveRandomLook;
 }

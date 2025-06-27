@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 6353d55310de8724d9327359cc55ea47
+guid: 963af8d99640d094a9a064cea4d70a13
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7301479720404975506
-    second: spr_coin_roj_0
+      213: 3636765450789175911
+    second: spr_coin_gri_0
   - first:
-      213: 1776079719383877786
-    second: spr_coin_roj_1
+      213: -7287818360224525318
+    second: spr_coin_gri_1
   - first:
-      213: 6337075000036577556
-    second: spr_coin_roj_2
+      213: -6942878118906197093
+    second: spr_coin_gri_2
   - first:
-      213: -7558928413261835894
-    second: spr_coin_roj_3
+      213: -4875957336769796633
+    second: spr_coin_gri_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_coin_roj_0
+      name: spr_coin_gri_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 29ff47dee11145560800000000000000
-      internalID: 7301479720404975506
+      spriteID: 762c3b9b8e2687230800000000000000
+      internalID: 3636765450789175911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_coin_roj_1
+      name: spr_coin_gri_1
       rect:
         serializedVersion: 2
         x: 16
@@ -159,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a98c6ae3817e5a810800000000000000
-      internalID: 1776079719383877786
+      spriteID: af35f3b50d77cda90800000000000000
+      internalID: -7287818360224525318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_coin_roj_2
+      name: spr_coin_gri_2
       rect:
         serializedVersion: 2
         x: 32
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41150342320d1f750800000000000000
-      internalID: 6337075000036577556
+      spriteID: b9b83c3c221f5af90800000000000000
+      internalID: -6942878118906197093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_coin_roj_3
+      name: spr_coin_gri_3
       rect:
         serializedVersion: 2
         x: 48
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a81dbe438aa491790800000000000000
-      internalID: -7558928413261835894
+      spriteID: 7e560e9d2ae155cb0800000000000000
+      internalID: -4875957336769796633
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e072e977aa053aa4cb15dc46d7bd8546
+    spriteID: 7b2c681edcfe9ea40b46010260aaec78
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spr_coin_roj_0: 7301479720404975506
-      spr_coin_roj_1: 1776079719383877786
-      spr_coin_roj_2: 6337075000036577556
-      spr_coin_roj_3: -7558928413261835894
+      spr_coin_gri_0: 3636765450789175911
+      spr_coin_gri_1: -7287818360224525318
+      spr_coin_gri_2: -6942878118906197093
+      spr_coin_gri_3: -4875957336769796633
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 963af8d99640d094a9a064cea4d70a13
+guid: 745f227efa3f2894ea532b91aff5d356
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3636765450789175911
-    second: spr_coin_gri_0
+      213: 8710723752907654049
+    second: spr_coin_azu_0
   - first:
-      213: -7287818360224525318
-    second: spr_coin_gri_1
+      213: -5065929880676911926
+    second: spr_coin_azu_1
   - first:
-      213: -6942878118906197093
-    second: spr_coin_gri_2
+      213: 1930441562187272357
+    second: spr_coin_azu_2
   - first:
-      213: -4875957336769796633
-    second: spr_coin_gri_3
+      213: 5258327978300046976
+    second: spr_coin_azu_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_coin_gri_0
+      name: spr_coin_azu_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
         height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.49}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 762c3b9b8e2687230800000000000000
-      internalID: 3636765450789175911
+      spriteID: 1a34e941a15b2e870800000000000000
+      internalID: 8710723752907654049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_coin_gri_1
+      name: spr_coin_azu_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
         height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.49}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af35f3b50d77cda90800000000000000
-      internalID: -7287818360224525318
+      spriteID: ac4373d2d9332b9b0800000000000000
+      internalID: -5065929880676911926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_coin_gri_2
+      name: spr_coin_azu_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
         height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.49}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9b83c3c221f5af90800000000000000
-      internalID: -6942878118906197093
+      spriteID: 5a092d57f5e4aca10800000000000000
+      internalID: 1930441562187272357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_coin_gri_3
+      name: spr_coin_azu_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
         height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.49}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e560e9d2ae155cb0800000000000000
-      internalID: -4875957336769796633
+      spriteID: 08e721bbf6559f840800000000000000
+      internalID: 5258327978300046976
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7b2c681edcfe9ea40b46010260aaec78
+    spriteID: 01951abb210fd3e4281277ad980da3bf
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spr_coin_gri_0: 3636765450789175911
-      spr_coin_gri_1: -7287818360224525318
-      spr_coin_gri_2: -6942878118906197093
-      spr_coin_gri_3: -4875957336769796633
+      spr_coin_azu_0: 8710723752907654049
+      spr_coin_azu_1: -5065929880676911926
+      spr_coin_azu_2: 1930441562187272357
+      spr_coin_azu_3: 5258327978300046976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
