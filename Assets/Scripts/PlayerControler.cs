@@ -52,6 +52,9 @@ public class PlayerControler : MonoBehaviour
     [SerializeField] private Vector2 knockedPower;
     [SerializeField] private float knockedDuration;
 
+    [Header("Dearh VFX")]
+    [SerializeField] private GameObject deathVFX;
+
     private void Awake()
     {
         m_gatherInput = GetComponent<GatherInput>();
@@ -208,6 +211,12 @@ public class PlayerControler : MonoBehaviour
         isKnocked= false;
         //canBeKnocked= true;
     }
+
+    public void Die() 
+    {
+        GameObject deathVFXPrefab = Instantiate(deathVFX, m_transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    } 
 
     private void OnDrawGizmos()
     {
