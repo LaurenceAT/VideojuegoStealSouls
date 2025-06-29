@@ -47,14 +47,14 @@ TagManager:
   - name: Middleground
     uniqueID: 1199473689
     locked: 0
+  - name: Items
+    uniqueID: 2696145337
+    locked: 0
   - name: Player
     uniqueID: 4259555011
     locked: 0
   - name: Ground
     uniqueID: 2867149449
-    locked: 0
-  - name: Items
-    uniqueID: 2696145337
     locked: 0
   m_RenderingLayers:
   - Default

@@ -65,7 +65,6 @@ public class PlayerControler : MonoBehaviour
     }
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         idSpeed = Animator.StringToHash("speed");
@@ -73,7 +72,27 @@ public class PlayerControler : MonoBehaviour
         idIsWallDetected = Animator.StringToHash("isWallDetected");
         idKnockback = Animator.StringToHash("knockback");
         counterExtraJumps = extraJumps;
+        CheckPlayerRespawnState();
     }
+
+
+    private void CheckPlayerRespawnState()
+    {
+        if (GameManager.Instance.hasCheckPointActive)
+        {
+            StartInCheckpoint();
+        }
+        
+    }
+
+
+
+    private void StartInCheckpoint()
+    {
+        m_animator.Play("Idle");
+    }
+
+
 
     private void Update()
     {
@@ -178,6 +197,10 @@ public class PlayerControler : MonoBehaviour
     {
         m_rigidbody2D.linearVelocity = new Vector2(wallJumpForce.x * -direction, wallJumpForce.y);
         HandleDirection();
+
+        counterExtraJumps = extraJumps;
+        canDoubleJump = true;
+
         StartCoroutine(WallJumpRoutine());
     }
 

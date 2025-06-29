@@ -12,6 +12,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerControler playerControler;
     public PlayerControler PlayerControler => playerControler;
 
+
+    [Header("Respawn Sttings")]
+    public bool hasCheckPointActive;
+    public Vector3 checkpointRespawnPosition;
+
+
     [Header("Coin Manager")] 
     [SerializeField] private int _coincollected;
     [SerializeField] private bool coinHaveRandomLook;   
@@ -26,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     public void RespawnPlayer()
     {
+        if (hasCheckPointActive) playerRespawnPoint.position = checkpointRespawnPosition;
         StartCoroutine(RespawnPlayerCoroutine());
     }
 
