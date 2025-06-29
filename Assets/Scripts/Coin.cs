@@ -19,7 +19,7 @@ public class Coin : MonoBehaviour
 
     private void Start()
     {
-        gameManager = GameManager.instance;
+        gameManager = GameManager.Instance;
         SetRandomCOin();
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +32,7 @@ public class Coin : MonoBehaviour
 
     private void SetRandomCOin()
     {
-        if (!GameManager.instance.CoinHaveRandomLook())
+        if (!GameManager.Instance.CoinHaveRandomLook())
         {
             UpdateCoinType();
             return;

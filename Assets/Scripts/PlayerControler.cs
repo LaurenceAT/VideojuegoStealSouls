@@ -72,8 +72,6 @@ public class PlayerControler : MonoBehaviour
         idIsGrounded = Animator.StringToHash("isGrounded");
         idIsWallDetected = Animator.StringToHash("isWallDetected");
         idKnockback = Animator.StringToHash("knockback");
-        lFoot = GameObject.Find("LFoot").GetComponent<Transform>();
-        rFoot = GameObject.Find("RFoot").GetComponent<Transform>();
         counterExtraJumps = extraJumps;
     }
 
